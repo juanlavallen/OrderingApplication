@@ -11,4 +11,8 @@ export class OrdersService {
   async createOrder(request: CreateOrderRequest) {
     return this.ordersRepository.create(request);
   }
+
+  async findOrders() {
+    return this.ordersRepository.find({});
+  }
 }
